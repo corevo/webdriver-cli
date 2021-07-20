@@ -59,12 +59,13 @@ const args = require('yargs')
 async function startRepl(builder) {
   const driver = builder.build()
 
-  console.log('Starting REPL use `d` to access the driver')
-  const replServer = repl.start('> ')
-  replServer.context.d = driver
-  replServer.on('exit', async () => {
+  process.on('exit', async () => {
     console.log('tearing down the webdriver session')
     await driver.quit()
     console.log('webdriver session destroyed')
   })
+
+  console.log('Starting REPL use `d` to access the driver')
+  const replServer = repl.start('> ')
+  replServer.context.d = driver
 }

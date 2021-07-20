@@ -1,6 +1,6 @@
 {
   "name": "webdriver-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/webdriver.js",
   "repository": "git@github.com:corevo/webdriver-cli.git",
   "author": "Tomer <tomer@corevo.io>",
