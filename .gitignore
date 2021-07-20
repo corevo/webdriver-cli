@@ -1,0 +1,6 @@
+node_modules
+_MACOSX/
+.DS_Store
+yarn-error.log
+*.log
+.*.swp

@@ -1,0 +1,28 @@
+{
+  "name": "webdriver-cli",
+  "version": "0.1.0",
+  "main": "src/webdriver.js",
+  "repository": "git@github.com:corevo/webdriver-cli.git",
+  "author": "Tomer <tomer@corevo.io>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "bin": {
+    "webdriver-cli": "src/index.js"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-pattern node_modules --ignore-pattern json --ext js \"**/*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-beta.4",
+    "yargs": "^17.0.1"
+  }
+}
