@@ -37,11 +37,11 @@ const args = require('yargs')
   const builder = new webdriver.Builder()
 
   if (args._[0] === 'launch') {
-    const { browser, ['ios-sim-id']: iosSimId } = args
+    const { browser, iosSimId } = args
 
     builder.forBrowser(browser)
 
-    if (browser === 'safari') {
+    if (browser === 'safari' && iosSimId) {
       builder.setSafariOptions(
         new safari.Options()
           .set('platformName', 'ios')
